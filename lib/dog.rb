@@ -80,11 +80,13 @@ class Dog
   end
 
   def self.new_from_db(row)
-    # self.new(id: row[0], name: row[1], breed: row[2])
-    id = row[0]
-    name = row[1]
-    breed = row[2]
-    self.new(id: id, name: name, breed: breed)
+    self.new(id: row[0], name: row[1], breed: row[2])
+
+    # OR
+    # id = row[0]
+    # name = row[1]
+    # breed = row[2]
+    # self.new(id: id, name: name, breed: breed)
   end
 
   def update
