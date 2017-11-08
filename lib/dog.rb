@@ -64,10 +64,10 @@ class Dog
       LIMIT 1
     SQL
 
-    rows = DB[:conn].execute(sql, id)
-    self.new_from_db(rows.first)
+    # rows = DB[:conn].execute(sql, id)
+    # self.new_from_db(rows.first)
 
-    OR
+    # OR
     DB[:conn].execute(sql, id).map do |row|
       self.new_from_db(row)
     end.first
